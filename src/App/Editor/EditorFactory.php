@@ -1,8 +1,8 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Editor;
+namespace LaraEditor\App\Editor;
 
-use Topdot\Grapesjs\App\Contracts\Editable;
+use LaraEditor\App\Contracts\Editable;
 
 class EditorFactory extends EditorBaseClass
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Models;
+namespace LaraEditor\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

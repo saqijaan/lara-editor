@@ -1,9 +1,9 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Traits;
+namespace LaraEditor\App\Traits;
 
 use Illuminate\Http\Request;
-use Topdot\Grapesjs\App\Editor\EditorFactory;
+use LaraEditor\App\Editor\EditorFactory;
 
 trait EditorTrait{
 

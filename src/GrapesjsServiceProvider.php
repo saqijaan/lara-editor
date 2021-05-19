@@ -1,6 +1,6 @@
 <?php
 
-namespace Topdot\Grapesjs;
+namespace LaraEditor;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;

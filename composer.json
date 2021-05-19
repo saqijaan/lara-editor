@@ -1,5 +1,5 @@
 {
-    "name": "jawad-topdot/laravel-grapesjs",
+    "name": "starsoft/laravel-editor",
     "description": "A package for use Grapes.js in Larave",
     "type": "library",
     "require": {
@@ -16,13 +16,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Topdot\\Grapesjs\\": "src"
+            "LaraEditor\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Topdot\\Grapesjs\\GrapesjsServiceProvider"
+                "LaraEditor\\GrapesjsServiceProvider"
             ]
         }
     },

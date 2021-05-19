@@ -1,14 +1,14 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Http\Controllers;
+namespace LaraEditor\App\Http\Controllers;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
-use Topdot\Grapesjs\App\Editor\EditorFactory;
-use Topdot\Grapesjs\App\Traits\EditorTrait;
+use LaraEditor\App\Editor\EditorFactory;
+use LaraEditor\App\Traits\EditorTrait;
 
 class EditorController extends Controller
 {

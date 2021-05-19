@@ -1,6 +1,6 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Contracts;
+namespace LaraEditor\App\Contracts;
 
 interface Editable{
 

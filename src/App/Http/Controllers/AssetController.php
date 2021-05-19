@@ -1,11 +1,11 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Http\Controllers;
+namespace LaraEditor\App\Http\Controllers;
 
-use Topdot\Grapesjs\App\Models\TempMedia;
+use LaraEditor\App\Models\TempMedia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Topdot\Grapesjs\App\Editor\AssetRepository;
+use LaraEditor\App\Editor\AssetRepository;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class AssetController extends Controller

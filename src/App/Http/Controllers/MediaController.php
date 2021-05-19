@@ -1,11 +1,11 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Http\Controllers;
+namespace LaraEditor\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Topdot\Grapesjs\App\Models\TempMedia;
+use LaraEditor\App\Models\TempMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class MediaController extends Controller

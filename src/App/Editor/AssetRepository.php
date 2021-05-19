@@ -1,6 +1,6 @@
 <?php
 
-namespace Topdot\Grapesjs\App\Editor;
+namespace LaraEditor\App\Editor;
 
 use Illuminate\Http\Request;
 use Modules\Media\Models\TempMedia;
