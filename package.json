@@ -20,5 +20,11 @@
         "sass": "^1.32.12",
         "sass-loader": "^11.0.1",
         "toastr": "^2.1.4"
+    },
+    "dependencies": {
+        "bower": "^1.8.12",
+        "grapesjs-lory-slider": "^0.1.5",
+        "grapesjs-tabs": "^1.0.6",
+        "grapesjs-tui-image-editor": "^0.1.3"
     }
 }

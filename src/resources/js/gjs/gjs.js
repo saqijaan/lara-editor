@@ -1,6 +1,9 @@
 import 'grapesjs/dist/css/grapes.min.css';
 const grapesjs = require('grapesjs');
 import pluginBlocks from 'grapesjs-blocks-basic';
+import grapesjsTuiImageEditor from 'grapesjs-tui-image-editor';
+import grapesjsLorySlider from 'grapesjs-lory-slider';
+import grapesjsTabs from 'grapesjs-tabs';
 // import bootstrap4 from 'grapesjs-blocks-bootstrap4';
 
 const toastr = require('toastr');
@@ -8,31 +11,45 @@ const toastr = require('toastr');
 let config = window.editorConfig;
 delete window.editorConfig;
 
+config.avoidInlineStyle = 0;
 config.plugins = [
-	pluginBlocks, 
+	pluginBlocks,
+	grapesjsTuiImageEditor,
+	grapesjsLorySlider,
+	grapesjsTabs
 	// bootstrap4
 ];
 config.pluginsOpts = {
 	'grapesjs-blocks-basic': {},
+	'grapesjs-lory-slider': {
+		sliderBlock: {
+			category: 'Extra'
+		}
+	},
+	'grapesjs-tabs': {
+		tabsBlock: {
+			category: 'Extra'
+		}
+	},
 	// 'grapesjs-blocks-bootstrap4': {}
 };
 
 let editor = grapesjs.init(config);
 
 let loader = document.getElementById('loader');
-let showLoader = function(){
-	if (loader){
+let showLoader = function () {
+	if (loader) {
 		loader.style.display = 'flex';
 	}
 }
 
-let hideLoader = function(){
-	if (loader){
+let hideLoader = function () {
+	if (loader) {
 		loader.style.display = 'none';
 	}
 }
 
-editor.on('load',()=>{
+editor.on('load', () => {
 	hideLoader();
 })
 
