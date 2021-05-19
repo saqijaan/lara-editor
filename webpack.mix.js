@@ -19,7 +19,7 @@ const mix = require('laravel-mix');
  */
 
 // merge all needed JS into a big bundle file
-mix.js('src/resources/js/gjs', 'src/public/vendor/grapesjs/editor.js')
+mix.js('src/resources/js/gjs', 'src/public/vendor/laraeditor/editor.js')
 
 
 // FOR MAINTAINERS

@@ -11,13 +11,13 @@ class AssetRepository
     public function getAllMediaLinks()
     {
         $allStoredMedia = Media::all()->map(function($media){
-            return route('grapesjs.media.show', $media);
+            return route('laraeditor.media.show', $media);
         });
 
         return $allStoredMedia->toArray();
     }
 
     public function getUploadUrl(){
-    	return route('grapesjs.editor.asset.store');
+    	return config('laraveleditor.assets.upload-url',route('laraeditor.editor.asset.store'));
     }
 }

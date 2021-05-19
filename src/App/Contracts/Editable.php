@@ -2,21 +2,22 @@
 
 namespace LaraEditor\App\Contracts;
 
-interface Editable{
-
+interface Editable
+{
     public function setGjsDataAttribute($value);
     public function getGjsDataAttribute($value): array;
 
-    public function getStyleSheetLinksAttribute(): array;
-    public function getScriptLinksAttribute(): array;
+    public function getHtml(): array | string;
+    public function getCss(): array | string;
 
-    public function getComponentsAttribute() : array | string;
-    public function getStylesAttribute() :array;
+    public function getComponents(): array | string;
+    public function getStyles(): array | string;
 
-    public function getHtmlAttribute() :string;
-    public function getCssAttribute() :string;
-    public function getAssetsAttribute() :array;
+    public function getStyleSheetLinks(): array;
+    public function getScriptLinks(): array;
+    public function getAssets(): array;
 
-    public function getStoreUrlAttribute(): string;
-    public function getTemplatesUrlAttribute(): string | null;
+    public function getEditorStoreUrl(): string | null;
+    public function getEditorLoadUrl(): string | null;
+    public function getEditorTemplatesUrl(): string | null;
 }

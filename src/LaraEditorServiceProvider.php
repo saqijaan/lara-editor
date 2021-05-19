@@ -4,10 +4,11 @@ namespace LaraEditor;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\URL;
 
-class GrapesjsServiceProvider extends ServiceProvider
+class LaraEditorServiceProvider extends ServiceProvider
 {
-    public $routeFilePath = '/routes/grapesjs.php';
+    public $routeFilePath = '/routes/laraeditor.php';
 
     /**
      * Register services.
@@ -25,8 +26,10 @@ class GrapesjsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'grapesjs');
-        $this->mergeConfigFrom(__DIR__.'/config.php', 'grapesjs');
+        URL::forceScheme('https');
+
+        $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'laraeditor');
+        $this->mergeConfigFrom(__DIR__.'/config.php', 'laraeditor');
 
         $this->setupRoutes($this->app->router);
 
@@ -60,7 +63,7 @@ class GrapesjsServiceProvider extends ServiceProvider
     public function publishFiles()
     {
         $this->publishes([
-            __DIR__.'/config.php' => config_path('grapesjs.php'),
+            __DIR__.'/config.php' => config_path('laraeditor.php'),
         ], 'config');
 
         $this->publishes([

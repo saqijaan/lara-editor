@@ -26,6 +26,6 @@
         <i class="fa fa-spinner fa-spin"></i>
     </div>
     <div id="{{ str_replace('#', '', $editorConfig->container ?? 'editor') }}"></div>
-    <script src="{{ asset('vendor/grapesjs/editor.js') }}"></script>
+    <script src="{{ asset('vendor/laraeditor/editor.js') }}"></script>
 </body>
 </html>

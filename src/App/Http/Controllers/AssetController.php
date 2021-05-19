@@ -35,7 +35,7 @@ class AssetController extends Controller
         $media = TempMedia::create()->addMediaFromRequest('file')->toMediaCollection('default');
         return response()->json([
             'data' => [
-                route('grapesjs.media.show', $media)
+                route('laraeditor.media.show', $media)
             ]
         ]);
     }

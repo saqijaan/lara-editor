@@ -31,6 +31,21 @@ config.pluginsOpts = {
 			category: 'Extra'
 		}
 	},
+	'grapesjs-tui-image-editor': {
+		config: {
+			includeUI: {
+				initMenu: 'filter',
+			},
+		},
+		icons: {
+			'menu.normalIcon.path': '../icon-d.svg',
+			'menu.activeIcon.path': '../icon-b.svg',
+			'menu.disabledIcon.path': '../icon-a.svg',
+			'menu.hoverIcon.path': '../icon-c.svg',
+			'submenu.normalIcon.path': '../icon-d.svg',
+			'submenu.activeIcon.path': '../icon-c.svg',
+		},
+	}
 	// 'grapesjs-blocks-bootstrap4': {}
 };
 

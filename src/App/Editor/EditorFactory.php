@@ -8,20 +8,19 @@ class EditorFactory extends EditorBaseClass
 {
     public function initialize(Editable $editable)
     {
-        // dd($editable->style_sheet_links);
         $assetRepository = app(AssetRepository::class);
         $editorCanvas = new EditorCanvas;
         $editorCanvas->styles = array_merge(
-            config('grapesjs.styles'), $editable->style_sheet_links
+            config('laraeditor.styles'), $editable->getStyleSheetLinks()
         );
 
         $editorCanvas->scripts = array_merge(
-            config('grapesjs.scripts'), $editable->script_links
+            config('laraeditor.scripts'), $editable->getScriptLinks()
         );
 
         $editorStorage = new EditorStorageManager;
         $editorStorage->type = 'remote';
-        $editorStorage->urlStore = $editable->store_url;
+        $editorStorage->urlStore = $editable->getEditorStoreUrl();
         $editorStorage->params = [
             '_token' => csrf_token()
         ];
@@ -34,13 +33,14 @@ class EditorFactory extends EditorBaseClass
         ];
         $editorAssetManager->uploadName = 'file';
         $editorConfig = new EditorConfig;
-        $editorConfig->components = $editable->components; 
-        $editorConfig->style = $editable->styles;
+        $editorConfig->components = $editable->getComponents(); 
+        $editorConfig->style = $editable->getStyles();
         $editorConfig->canvas = $editorCanvas;
         $editorConfig->assetManager = $editorAssetManager;
         $editorConfig->storageManager = $editorStorage;
         $editorConfig->forceClass = false;
-        $editorConfig->templatesUrl = $editable->templates_url;
+        $editorConfig->avoidInlineStyle = false;
+        $editorConfig->templatesUrl = $editable->getEditorTemplatesUrl();
 
         return $editorConfig;
     }

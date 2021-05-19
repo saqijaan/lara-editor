@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::prefix('grapesjs')->name('grapesjs.')->namespace('LaraEditor\App\Http\Controllers')->group(function(){
+Route::prefix('laraeditor')->name('laraeditor.')->namespace('LaraEditor\App\Http\Controllers')->group(function(){
 	Route::post('editor/asset/store', 'AssetController@store')->name('editor.asset.store');
 	
 	Route::get('editor/{model}/{editable}', 'EditorController@editor')->name('editor.model.editor');

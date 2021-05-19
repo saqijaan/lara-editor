@@ -34,8 +34,8 @@ class EditorController extends Controller
 
     public function templates(Request $request)
     {
-        $templatesPath = resource_path('views/vendor/grapesjs/templates');
-        $otherBlocks = resource_path('views/vendor/grapesjs/gjs-blocks');
+        $templatesPath = resource_path('views/vendor/laraeditor/templates');
+        $otherBlocks = resource_path('views/vendor/laraeditor/gjs-blocks');
 
         if(!File::exists($templatesPath)) {
             $templatesPath = __DIR__ . '/../../../resources/views/templates';
@@ -53,7 +53,7 @@ class EditorController extends Controller
                 'category' => 'Templates',
                 'id' => $fileInfo->getFilename(),
                 'label' => Str::title(str_replace(["-"], " ", $file_name)),
-                'content' => view("grapesjs::templates.{$file_name}")->render()
+                'content' => view("laraeditor::templates.{$file_name}")->render()
             ];
         }
         
@@ -63,7 +63,7 @@ class EditorController extends Controller
                 'category' => 'Blocks',
                 'id' => $fileInfo->getFilename(),
                 'label' => Str::title(str_replace(["-"], " ", $file_name)),
-                'content' => view("grapesjs::templates.{$file_name}")->render()
+                'content' => view("laraeditor::templates.{$file_name}")->render()
             ];
         }
 

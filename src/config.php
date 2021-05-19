@@ -2,5 +2,8 @@
 
 return [
     'styles' => [],
-    'scripts' => []
+    'scripts' => [],
+    'assets' => [
+        'upload-url' => null
+    ]
 ];
