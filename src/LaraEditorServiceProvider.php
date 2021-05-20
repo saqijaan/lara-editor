@@ -26,8 +26,6 @@ class LaraEditorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        URL::forceScheme('https');
-
         $this->loadViewsFrom(realpath(__DIR__.'/resources/views/'), 'laraeditor');
         $this->mergeConfigFrom(__DIR__.'/config.php', 'laraeditor');
 
