@@ -75,17 +75,17 @@ class LaraEditorServiceProvider extends ServiceProvider
             ], 'migrations');
         }
 
-        if (! class_exists('CreateMediaTable')) {
-            $stub_file = "/database/migrations/create_media_table.php.stub";
+        // if (! class_exists('CreateMediaTable')) {
+        //     $stub_file = "/database/migrations/create_media_table.php.stub";
 
-            $stub_path = __DIR__.'/../../../spatie/laravel-medialibrary';
-            if(!file_exists($stub_path.$stub_file)){
-                $stub_path = __DIR__;
-            }
+        //     $stub_path = __DIR__.'/../../../spatie/laravel-medialibrary';
+        //     if(!file_exists($stub_path.$stub_file)){
+        //         $stub_path = __DIR__;
+        //     }
 
-            $this->publishes([
-                $stub_path.$stub_file => database_path('migrations/2021_05_06_064425_create_media_table.php'),
-            ], 'migrations');
-        }
+        //     $this->publishes([
+        //         $stub_path.$stub_file => database_path('migrations/2021_05_06_064425_create_media_table.php'),
+        //     ], 'migrations');
+        // }
     }
 }
