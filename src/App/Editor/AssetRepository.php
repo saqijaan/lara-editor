@@ -2,8 +2,6 @@
 
 namespace LaraEditor\App\Editor;
 
-use Illuminate\Http\Request;
-use Modules\Media\Models\TempMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class AssetRepository
