@@ -41,6 +41,7 @@ class EditorFactory extends EditorBaseClass
         $editorConfig->forceClass = false;
         $editorConfig->avoidInlineStyle = false;
         $editorConfig->templatesUrl = $editable->getEditorTemplatesUrl();
+        $editorConfig->assetStoreUrl = route('editor.asset.store');
 
         return $editorConfig;
     }
