@@ -7,7 +7,7 @@ use LaraEditor\App\Editor\EditorFactory;
 
 trait EditableTrait
 {
-    public $placeholders = [];
+    protected $placeholders = [];
 
     public function setGjsDataAttribute($value)
     {
@@ -68,6 +68,11 @@ trait EditableTrait
         $this->placeholders[$placeolder] = $content;
 
         return $this;
+    }
+
+    public function getPlaceholders()
+    {
+        return $this->placeholders;
     }
 
     private function replacePlaceholders()
