@@ -13,6 +13,11 @@ trait EditableTrait
     {
         $this->attributes['gjs_data'] = json_encode($value);
     }
+    
+    public function getHtmlAttribute()
+    {
+        return optional($this->gjs_data)['html'];
+    }
 
     public function getGjsDataAttribute($value): array
     {
@@ -30,7 +35,7 @@ trait EditableTrait
 
     public function getCss(): string
     {
-        return json_decode(optional($this->gjs_data)['css'] ?? '[]');
+        return optional($this->gjs_data)['css'] ? optional($this->gjs_data)['css'] : '';
     }
 
     public function getComponents(): array
