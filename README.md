@@ -13,7 +13,9 @@ To Get Start with LaraEditor Follow steps below
 
 4. Implement Required methods in model and create 2 routes to load and store editor content
 5. create a *EditorContentController* controller and add following methods
-6. `**
+
+``` 
+    /**
      * Display a listing of the resource.
      *
      * @return Response
@@ -32,7 +34,7 @@ To Get Start with LaraEditor Follow steps below
     public function store(Request $request, Page $page)
     {
         return $page->saveEditorData($request);
-        
+
     }
 
     public function templates(Page $page)
@@ -41,11 +43,13 @@ To Get Start with LaraEditor Follow steps below
            $page->getTemplatesFromPath(config('cms.templatesPath')),
            $page->getBlocksFromPath(config('cms.blocksPath')),
         );
-    }`
+    }
+```
     
 7. create following routes
-8. `Route::get('page-customize/{page}', [PageEditorController::class, 'index'])->name('page-customize.index');
+```
+Route::get('page-customize/{page}', [PageEditorController::class, 'index'])->name('page-customize.index');
 Route::post('page-customize/{page}', [PageEditorController::class, 'store'])->name('page-customize.store');
 Route::get('page-customize/{page}/templates', [PageEditorController::class, 'templates'])->name('page-customize.templates');
-`
+```
 
