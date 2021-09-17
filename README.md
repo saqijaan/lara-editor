@@ -53,3 +53,10 @@ Route::post('page-customize/{page}', [PageEditorController::class, 'store'])->na
 Route::get('page-customize/{page}/templates', [PageEditorController::class, 'templates'])->name('page-customize.templates');
 ```
 
+8. publish & run migration files
+```
+php artisan vendor:publish --provider="LaraEditor\LaraEditorServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"
+php artisan migrate
+
+```
