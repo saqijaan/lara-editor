@@ -1,4 +1,8 @@
 # lara-editor
+install via composer.
+
+`composer require starsoft/laravel-editor`
+
 To Get Start with LaraEditor Follow steps below
 
 1. Add 'gjs_data' Column to model you are going to use with Editor.
