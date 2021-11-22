@@ -38,7 +38,7 @@ class EditorFactory extends EditorBaseClass
         $editorConfig->canvas = $editorCanvas;
         $editorConfig->assetManager = $editorAssetManager;
         $editorConfig->storageManager = $editorStorage;
-        $editorConfig->forceClass = false;
+        $editorConfig->forceClass = config('laraeditor.force_class',true);
         $editorConfig->avoidInlineStyle = false;
         $editorConfig->templatesUrl = $editable->getEditorTemplatesUrl();
         $editorConfig->assetStoreUrl = route('laraeditor.editor.asset.store');
