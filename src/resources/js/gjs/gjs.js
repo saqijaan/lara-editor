@@ -6,6 +6,8 @@ import grapesjsLorySlider from 'grapesjs-lory-slider';
 import grapesjsTabs from 'grapesjs-tabs';
 // import bootstrap4 from 'grapesjs-blocks-bootstrap4';
 
+let remoteIcons = 'https://cdnjs.cloudflare.com/ajax/libs/tui-image-editor/3.15.0/svg/'
+
 const toastr = require('toastr');
 
 let config = window.editorConfig;
@@ -14,11 +16,10 @@ delete window.editorConfig;
 config.avoidInlineStyle = 0;
 config.plugins = [
 	pluginBlocks,
-	grapesjsTuiImageEditor,
 	grapesjsLorySlider,
 	grapesjsTabs
-	// bootstrap4
 ];
+
 config.pluginsOpts = {
 	'grapesjs-blocks-basic': {},
 	'grapesjs-lory-slider': {
@@ -30,24 +31,28 @@ config.pluginsOpts = {
 		tabsBlock: {
 			category: 'Extra'
 		}
-	},
-	'grapesjs-tui-image-editor': {
-		config: {
-			includeUI: {
-				initMenu: 'filter',
-			},
-		},
-		icons: {
-			'menu.normalIcon.path': '../icon-d.svg',
-			'menu.activeIcon.path': '../icon-b.svg',
-			'menu.disabledIcon.path': '../icon-a.svg',
-			'menu.hoverIcon.path': '../icon-c.svg',
-			'submenu.normalIcon.path': '../icon-d.svg',
-			'submenu.activeIcon.path': '../icon-c.svg',
-		},
 	}
 	// 'grapesjs-blocks-bootstrap4': {}
 };
+
+config.plugins.push(grapesjsTuiImageEditor)
+config.pluginsOpts[grapesjsTuiImageEditor] = {
+	config: {
+		includeUI: {
+			initMenu: 'filter',
+		}
+	},
+	upload: true,
+	icons: {
+		'menu.normalIcon.path': `${remoteIcons}icon-d.svg`,
+		'menu.activeIcon.path': `${remoteIcons}icon-b.svg`,
+		'menu.disabledIcon.path': `${remoteIcons}icon-a.svg`,
+		'menu.hoverIcon.path': `${remoteIcons}icon-c.svg`,
+		'submenu.normalIcon.path': `${remoteIcons}icon-d.svg`,
+		'submenu.activeIcon.path': `${remoteIcons}icon-c.svg`,
+	},
+}
+
 
 let editor = grapesjs.init(config);
 
