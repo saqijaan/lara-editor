@@ -11755,8 +11755,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/dist/lara-editor/editor": 0,
-/******/ 			"dist/lara-editor/editor": 0
+/******/ 			"/dist/assets/editor": 0,
+/******/ 			"dist/assets/editor": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -11806,8 +11806,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["dist/lara-editor/editor"], () => (__webpack_require__("./src/resources/js/index.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dist/lara-editor/editor"], () => (__webpack_require__("./src/resources/scss/gjs.scss")))
+/******/ 	__webpack_require__.O(undefined, ["dist/assets/editor"], () => (__webpack_require__("./src/resources/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dist/assets/editor"], () => (__webpack_require__("./src/resources/scss/gjs.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -19,8 +19,8 @@ const mix = require('laravel-mix');
  */
 
 // merge all needed JS into a big bundle file
-mix.js('src/resources/js', 'dist/lara-editor/editor.js')
-    .sass('src/resources/scss/gjs.scss','dist/lara-editor/editor.css')
+mix.js('src/resources/js', 'dist/assets/editor.js')
+    .sass('src/resources/scss/gjs.scss','dist/assets/editor.css')
     .options({
         processCssUrls: false
     });

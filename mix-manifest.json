@@ -1,6 +1,6 @@
 {
-    "/dist/lara-editor/editor.js": "/dist/lara-editor/editor.js",
-    "/dist/lara-editor/editor.css": "/dist/lara-editor/editor.css",
+    "/dist/assets/editor.js": "/dist/assets/editor.js",
+    "/dist/assets/editor.css": "/dist/assets/editor.css",
     "/dist/fonts/main-fonts.eot": "/dist/fonts/main-fonts.eot",
     "/dist/fonts/main-fonts.svg": "/dist/fonts/main-fonts.svg",
     "/dist/fonts/main-fonts.ttf": "/dist/fonts/main-fonts.ttf",
