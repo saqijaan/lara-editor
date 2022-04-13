@@ -1,4 +1,5 @@
 # lara-editor
+
 install via composer.
 
 `composer require starsoft/laravel-editor`
@@ -14,7 +15,7 @@ To Get Start with LaraEditor Follow steps below
 4. Implement Required methods in model and create 2 routes to load and store editor content
 5. create a *EditorContentController* controller and add following methods
 
-``` 
+```
     /**
      * Display a listing of the resource.
      *
@@ -45,8 +46,9 @@ To Get Start with LaraEditor Follow steps below
         );
     }
 ```
-    
+
 7. create following routes
+
 ```
 Route::get('page-customize/{page}', [PageEditorController::class, 'index'])->name('page-customize.index');
 Route::post('page-customize/{page}', [PageEditorController::class, 'store'])->name('page-customize.store');
@@ -54,6 +56,7 @@ Route::get('page-customize/{page}/templates', [PageEditorController::class, 'tem
 ```
 
 8. publish & run migration files
+
 ```
 php artisan vendor:publish --provider="LaraEditor\LaraEditorServiceProvider" --tag="migrations"
 php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"

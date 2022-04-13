@@ -5,7 +5,3 @@ node_modules/
 .composer.lock
 composer.lock
 .phpunit.result.cache
-
-
-!src/public/vendor
-!fonts/vendor

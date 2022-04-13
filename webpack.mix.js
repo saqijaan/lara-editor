@@ -19,11 +19,17 @@ const mix = require('laravel-mix');
  */
 
 // merge all needed JS into a big bundle file
-mix.js('src/resources/js/gjs', 'src/public/vendor/laraeditor/editor.js')
+mix.js('src/resources/js', 'dist/lara-editor/editor.js')
+    .sass('src/resources/scss/gjs.scss','dist/lara-editor/editor.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.copyDirectory('node_modules/grapesjs/dist/fonts', 'dist/fonts')
 
 
 // FOR MAINTAINERS
 // copy asset files from Base's public folder the main app's public folder
 // so that you don't have to publish the assets with artisan to test them
-mix.copyDirectory('src/public', '../../../public')
-mix.copyDirectory('fonts', '../../../public/fonts')
+// mix.copyDirectory('src/public', '../../../public')
+// mix.copyDirectory('fonts', '../../../public/fonts')

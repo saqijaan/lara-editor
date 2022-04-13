@@ -1,9 +1,8 @@
-import 'grapesjs/dist/css/grapes.min.css';
 const grapesjs = require('grapesjs');
-import pluginBlocks from 'grapesjs-blocks-basic';
-import grapesjsTuiImageEditor from 'grapesjs-tui-image-editor';
-import grapesjsLorySlider from 'grapesjs-lory-slider';
-import grapesjsTabs from 'grapesjs-tabs';
+// import pluginBlocks from 'grapesjs-blocks-basic';
+// import grapesjsTuiImageEditor from 'grapesjs-tui-image-editor';
+// import grapesjsLorySlider from 'grapesjs-lory-slider';
+// import grapesjsTabs from 'grapesjs-tabs';
 // import bootstrap4 from 'grapesjs-blocks-bootstrap4';
 
 let remoteIcons = 'https://cdnjs.cloudflare.com/ajax/libs/tui-image-editor/3.15.0/svg/'
@@ -20,38 +19,38 @@ config.plugins = [
 	grapesjsTabs
 ];
 
-config.pluginsOpts = {
-	'grapesjs-blocks-basic': {},
-	'grapesjs-lory-slider': {
-		sliderBlock: {
-			category: 'Extra'
-		}
-	},
-	'grapesjs-tabs': {
-		tabsBlock: {
-			category: 'Extra'
-		}
-	}
-	// 'grapesjs-blocks-bootstrap4': {}
-};
+// config.pluginsOpts = {
+// 	'grapesjs-blocks-basic': {},
+// 	'grapesjs-lory-slider': {
+// 		sliderBlock: {
+// 			category: 'Extra'
+// 		}
+// 	},
+// 	'grapesjs-tabs': {
+// 		tabsBlock: {
+// 			category: 'Extra'
+// 		}
+// 	}
+// 	// 'grapesjs-blocks-bootstrap4': {}
+// };
 
-config.plugins.push(grapesjsTuiImageEditor)
-config.pluginsOpts[grapesjsTuiImageEditor] = {
-	config: {
-		includeUI: {
-			initMenu: 'filter',
-		}
-	},
-	upload: true,
-	icons: {
-		'menu.normalIcon.path': `${remoteIcons}icon-d.svg`,
-		'menu.activeIcon.path': `${remoteIcons}icon-b.svg`,
-		'menu.disabledIcon.path': `${remoteIcons}icon-a.svg`,
-		'menu.hoverIcon.path': `${remoteIcons}icon-c.svg`,
-		'submenu.normalIcon.path': `${remoteIcons}icon-d.svg`,
-		'submenu.activeIcon.path': `${remoteIcons}icon-c.svg`,
-	},
-}
+// config.plugins.push(grapesjsTuiImageEditor)
+// config.pluginsOpts[grapesjsTuiImageEditor] = {
+// 	config: {
+// 		includeUI: {
+// 			initMenu: 'filter',
+// 		}
+// 	},
+// 	upload: true,
+// 	icons: {
+// 		'menu.normalIcon.path': `${remoteIcons}icon-d.svg`,
+// 		'menu.activeIcon.path': `${remoteIcons}icon-b.svg`,
+// 		'menu.disabledIcon.path': `${remoteIcons}icon-a.svg`,
+// 		'menu.hoverIcon.path': `${remoteIcons}icon-c.svg`,
+// 		'submenu.normalIcon.path': `${remoteIcons}icon-d.svg`,
+// 		'submenu.activeIcon.path': `${remoteIcons}icon-c.svg`,
+// 	},
+// }
 
 
 let editor = grapesjs.init(config);
