@@ -8,11 +8,7 @@ class AssetRepository
 {
     public function getAllMediaLinks()
     {
-        $allStoredMedia = Media::all()->map(function($media){
-            return route('laraeditor.media.show', $media);
-        });
-
-        return $allStoredMedia->toArray();
+        return [];
     }
 
     public function getUploadUrl(){

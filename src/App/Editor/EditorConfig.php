@@ -15,4 +15,5 @@ class EditorConfig extends EditorBaseClass
     public EditorCanvas $canvas;
     public ?string $templatesUrl;
     public bool $forceClass=true;
+    public bool $avoidInlineStyle=false;
 }

@@ -12,12 +12,11 @@ const toastr = require('toastr');
 let config = window.editorConfig;
 delete window.editorConfig;
 
-config.avoidInlineStyle = 0;
-config.plugins = [
-	pluginBlocks,
-	grapesjsLorySlider,
-	grapesjsTabs
-];
+// config.plugins = [
+// 	pluginBlocks,
+// 	grapesjsLorySlider,
+// 	grapesjsTabs
+// ];
 
 // config.pluginsOpts = {
 // 	'grapesjs-blocks-basic': {},

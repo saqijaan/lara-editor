@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Item</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('vendor/laravel-editor/assets/editor.css') }}">
     <style>
         * {
             margin: 0;
@@ -24,6 +25,6 @@
         <i class="fa fa-spinner fa-spin"></i>
     </div>
     <div id="{{ str_replace('#', '', $editorConfig->container ?? 'editor') }}"></div>
-    <script src="{{ asset('vendor/laraeditor/editor.js') }}"></script>
+    <script src="{{ asset('vendor/laravel-editor/assets/editor.js') }}"></script>
 </body>
 </html>

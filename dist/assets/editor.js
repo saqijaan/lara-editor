@@ -19,9 +19,12 @@ var remoteIcons = 'https://cdnjs.cloudflare.com/ajax/libs/tui-image-editor/3.15.
 var toastr = __webpack_require__(/*! toastr */ "./node_modules/toastr/toastr.js");
 
 var config = window.editorConfig;
-delete window.editorConfig;
-config.avoidInlineStyle = 0;
-config.plugins = [pluginBlocks, grapesjsLorySlider, grapesjsTabs]; // config.pluginsOpts = {
+delete window.editorConfig; // config.plugins = [
+// 	pluginBlocks,
+// 	grapesjsLorySlider,
+// 	grapesjsTabs
+// ];
+// config.pluginsOpts = {
 // 	'grapesjs-blocks-basic': {},
 // 	'grapesjs-lory-slider': {
 // 		sliderBlock: {
