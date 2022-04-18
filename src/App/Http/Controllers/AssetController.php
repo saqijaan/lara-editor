@@ -25,17 +25,17 @@ class AssetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, AssetRepository $assetRepository)
     {
         $this->validate($request,[
-            'file' => 'bail|required|array|min:1',
-            'file.*' => 'bail|required|max:'.config('media-library.max_file_size', 2048)
+            'file' => 'required|file'
         ]);
 
-        $media = TempMedia::create()->addMediaFromRequest('file')->toMediaCollection('default');
+        $url = $assetRepository->addAsset($request->file('file'));
+
         return response()->json([
             'data' => [
-                route('laraeditor.media.show', $media)
+                $url
             ]
         ]);
     }

@@ -11,11 +11,13 @@ class EditorFactory extends EditorBaseClass
         $assetRepository = app(AssetRepository::class);
         $editorCanvas = new EditorCanvas;
         $editorCanvas->styles = array_merge(
-            config('laraeditor.styles'), $editable->getStyleSheetLinks()
+            config('laraeditor.styles'),
+            $editable->getStyleSheetLinks()
         );
 
         $editorCanvas->scripts = array_merge(
-            config('laraeditor.scripts'), $editable->getScriptLinks()
+            config('laraeditor.scripts'),
+            $editable->getScriptLinks()
         );
 
         $editorStorage = new EditorStorageManager;
@@ -31,18 +33,20 @@ class EditorFactory extends EditorBaseClass
         $editorAssetManager->headers = [
             '_token' => csrf_token()
         ];
+
         $editorAssetManager->uploadName = 'file';
         $editorConfig = new EditorConfig;
-        $editorConfig->components = $editable->getComponents(); 
+        $editorConfig->components = $editable->getComponents();
         $editorConfig->style = $editable->getStyles();
         $editorConfig->canvas = $editorCanvas;
         $editorConfig->assetManager = $editorAssetManager;
         $editorConfig->storageManager = $editorStorage;
-        $editorConfig->forceClass = config('laraeditor.force_class',true);
+        $editorConfig->forceClass = config('laraeditor.force_class', true);
         $editorConfig->avoidInlineStyle = false;
         $editorConfig->templatesUrl = $editable->getEditorTemplatesUrl();
-        $editorConfig->assetStoreUrl = route('laraeditor.editor.asset.store');
-
+        $editorConfig->assetStoreUrl = $assetRepository->getUploadUrl();
+        $editorConfig->filemanagerUrl = $assetRepository->getFileManagerUrl();
+        $editorConfig->_token = csrf_token();
         return $editorConfig;
     }
 }

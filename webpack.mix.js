@@ -20,6 +20,7 @@ const mix = require('laravel-mix');
 
 // merge all needed JS into a big bundle file
 mix.js('src/resources/js', 'dist/assets/editor.js')
+    .vue()
     .sass('src/resources/scss/gjs.scss','dist/assets/editor.css')
     .options({
         processCssUrls: false

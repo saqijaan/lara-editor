@@ -17,6 +17,7 @@ class LaraEditorServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        
     }
 
     /**
@@ -34,8 +35,18 @@ class LaraEditorServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishFiles();            
         }
+        
+        $this->updateFileManagerConfig();
     }
 
+    public function updateFileManagerConfig()
+    {
+        config()->set('file-manager.diskList',[config('laraeditor.assets.disk')]);
+        config()->set('file-manager.leftPath',config('laraeditor.assets.path'));
+        config()->set('file-manager.rightPath',config('laraeditor.assets.path'));
+        config()->set('cors.paths',array_merge(config('cors.paths'),['file-manager/*']));
+        // config()->set('cors.paths',array_merge(config('cors.paths'),['file-manager/*']));
+    }
 
 
     /**

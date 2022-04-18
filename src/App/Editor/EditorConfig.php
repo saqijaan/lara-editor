@@ -16,4 +16,5 @@ class EditorConfig extends EditorBaseClass
     public ?string $templatesUrl;
     public bool $forceClass=true;
     public bool $avoidInlineStyle=false;
+    public bool $filemanagerUrl=false;
 }

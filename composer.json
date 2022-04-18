@@ -5,7 +5,8 @@
     "type": "library",
     "require": {
         "php": "^7.3|^8.0",
-        "illuminate/support": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0|^9.0"
+        "illuminate/support": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0|^9.0",
+        "alexusmai/laravel-file-manager": "dev-master"
     },
     "license": "MIT",
     "authors": [
