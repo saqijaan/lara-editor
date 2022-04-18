@@ -2,6 +2,7 @@ const grapesjs = require('grapesjs');
 import LaravelEditorFilemanager from "./plugins/filemanager";
 import EditorPageSaveButton from "./plugins/laravel-editor-save-button/src"
 import CodeEditor from "./plugins/laravel-editor-code-editor/src"
+import loader from "./plugins/laravel-editor-loader/src"
 
 let remoteIcons = 'https://cdnjs.cloudflare.com/ajax/libs/tui-image-editor/3.15.0/svg/'
 
@@ -11,6 +12,7 @@ let config = window.editorConfig;
 delete window.editorConfig;
 
 config.plugins = [
+	loader,
 	LaravelEditorFilemanager,
 	EditorPageSaveButton,
 	CodeEditor
@@ -49,22 +51,22 @@ config.pluginsOpts = {
 
 window.editor = grapesjs.init(config);
 
-let loader = document.getElementById('loader');
-let showLoader = function () {
-	if (loader) {
-		loader.style.display = 'flex';
-	}
-}
+// let loader = document.getElementById('loader');
+// let showLoader = function () {
+// 	if (loader) {
+// 		loader.style.display = 'flex';
+// 	}
+// }
 
-let hideLoader = function () {
-	if (loader) {
-		loader.style.display = 'none';
-	}
-}
+// let hideLoader = function () {
+// 	if (loader) {
+// 		loader.style.display = 'none';
+// 	}
+// }
 
-editor.on('load', () => {
-	hideLoader();
-})
+// editor.on('load', () => {
+// 	hideLoader();
+// })
 
 
 let blockManager = editor.BlockManager;

@@ -21,9 +21,9 @@
 </head>
 
 <body>
-    <div id="loader" style="left: 0;top:0;background-color:white;opacity:0.7;position:absolute;align-items:center;justify-content:center;width:100%;height:100%;font-size:36pt;display:flex;z-index:100;">
+    {{-- <div id="loader" style="left: 0;top:0;background-color:white;opacity:0.7;position:absolute;align-items:center;justify-content:center;width:100%;height:100%;font-size:36pt;display:flex;z-index:100;">
         <i class="fa fa-spinner fa-spin"></i>
-    </div>
+    </div> --}}
     <div id="{{ str_replace('#', '', $editorConfig->container ?? 'editor') }}"></div>
     <script src="{{ asset('vendor/laravel-editor/assets/editor.js') }}"></script>
 </body>
