@@ -33,7 +33,7 @@ export default (editor, opts = {}) => {
 
   panelManager.addButton(panelId, {
     id: 'upload-file',
-    className: 'fa fa-upload',
+    className: 'fa fa-folder-open',
     command: 'show-file-manager',
     attributes: {
       title: 'Edit'
