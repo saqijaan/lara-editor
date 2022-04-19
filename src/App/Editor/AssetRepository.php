@@ -20,14 +20,16 @@ class AssetRepository
 
     public function getAllMediaLinks()
     {
-        return $this->disk->allFiles($this->diskPath);
+        return collect($this->disk->allFiles($this->diskPath))
+            ->map(fn ($file) => $this->disk->url($file))
+            ->toArray();
     }
 
     public function getUploadUrl()
     {
         return config('laraveleditor.assets.upload-url', route('laraeditor.asset.store'));
     }
-    
+
     public function getFileManagerUrl()
     {
         return config('laraveleditor.assets.filemanager_url', '/file-manager/');
@@ -35,7 +37,29 @@ class AssetRepository
 
     public function addAsset(UploadedFile $file)
     {
-        $path = $this->disk->putFileAs($this->diskPath, $file, $file->getClientOriginalName(), 'public');
+        /**
+         * Check if file is submitted by Image Editor Its name will be blob
+         */
+        if ( 'blob' ==  $file->getClientOriginalName()){
+            $path = $this->disk->putFile($this->diskPath, $file, 'public');
+        }
+        
         return $this->disk->url($path);
+    }
+
+    public function addAssetFromRequest($assetName = 'file')
+    {
+        $files = request()->file($assetName);
+        if (is_array($files)) {
+            $addedFiles = [];
+            foreach ($files as $file) {
+                $addedFiles = $this->addAsset($file);
+            }
+            return $addedFiles;
+        }
+
+        return [
+            $this->addAsset($files)
+        ];
     }
 }

@@ -1,0 +1,26 @@
+{
+  "name": "image-editor",
+  "version": "1.0.0",
+  "description": "Image Editor",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saqijaan/image-editor.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^3.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "grapesjs-tui-image-editor": "^0.1.3"
+  }
+}

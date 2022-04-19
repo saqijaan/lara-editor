@@ -28,10 +28,12 @@ class AssetController extends Controller
     public function store(Request $request, AssetRepository $assetRepository)
     {
         $this->validate($request,[
-            'file' => 'required|file'
+            'file' => 'required|array',
+            'file.*' => 'required|file'
         ]);
 
-        $url = $assetRepository->addAsset($request->file('file'));
+
+        $url = $assetRepository->addAssetFromRequest('file');
 
         return response()->json([
             'data' => [
