@@ -1,5 +1,4 @@
 const grapesjs = require('grapesjs');
-import grapesjsTuiImageEditor from 'grapesjs-tui-image-editor';
 import LaravelEditorFilemanager from "./plugins/filemanager";
 import EditorPageSaveButton from "./plugins/laravel-editor-save-button/src"
 import CodeEditor from "./plugins/laravel-editor-code-editor/src"
