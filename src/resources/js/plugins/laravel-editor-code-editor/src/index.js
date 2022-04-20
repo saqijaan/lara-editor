@@ -17,11 +17,13 @@ export default (editor, opts = {}) => {
     editor.DomComponents.getWrapper().set('content', '');
     editor.setComponents(code.trim());
     modal.close();
-    toastr.success('Html Saved', 'Success');
+    editor.runCommand('notify',{
+      type: 'success',
+      title: 'Success',
+      message: 'Html Saved'
+    })
   };
   container.appendChild(btnEdit);
-
-
 
   let codeViewer = editor.CodeManager
     .getViewer('CodeMirror')

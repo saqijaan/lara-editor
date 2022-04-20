@@ -42,8 +42,10 @@ class AssetRepository
          */
         if ( 'blob' ==  $file->getClientOriginalName()){
             $path = $this->disk->putFile($this->diskPath, $file, 'public');
+            return $this->disk->url($path);
         }
-        
+
+        $path = $this->disk->putFileAs($this->diskPath, $file, $file->getClientOriginalName(), 'public');
         return $this->disk->url($path);
     }
 

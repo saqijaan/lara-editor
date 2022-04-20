@@ -38,7 +38,11 @@ export default (editor, opts = {}) => {
       ...opts
     };
 
-    document.querySelector(options.container).append(loader);
+    let container = document.querySelector(options.container);
+    if ( container ){
+      container.append(loader);
+      container.style.position = 'relative';
+    }
   })
 
   commands.add('hide-loader',(editor, sender, opts)=>{
@@ -49,8 +53,13 @@ export default (editor, opts = {}) => {
       ...opts
     };
 
-    let loaderElement = document.querySelector(`${options.container} #loader`);
-    loaderElement && loaderElement.remove();
+    let container = document.querySelector(options.container);
+    if ( container ){
+      container.style.position = '';
+      let loaderElement = document.querySelector(`${options.container} #loader`);
+      loaderElement && loaderElement.remove();
+    }
+    
   })
 
 

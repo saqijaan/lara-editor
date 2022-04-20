@@ -1,21 +1,23 @@
-const grapesjs = require('grapesjs');
+import grapesjs from 'grapesjs';
 import LaravelEditorFilemanager from "./plugins/filemanager";
 import EditorPageSaveButton from "./plugins/laravel-editor-save-button/src"
 import CodeEditor from "./plugins/laravel-editor-code-editor/src"
 import Loader from "./plugins/laravel-editor-loader/src"
 import ImageEditor from "./plugins/image-editor/src"
-
-const toastr = require('toastr');
+import AssetManagerExtention from "./plugins/custom-asset-manager/src"
+import Notification from "./plugins/notifications/src";
 
 let config = window.editorConfig;
 delete window.editorConfig;
 
 config.plugins = [
+	Notification,
 	Loader,
 	LaravelEditorFilemanager,
 	EditorPageSaveButton,
 	CodeEditor,
-	ImageEditor
+	ImageEditor,
+	AssetManagerExtention
 ];
 
 config.pluginsOpts = {
