@@ -27,6 +27,9 @@ config.pluginsOpts = {
 			},
 			baseUrl: config.filemanager_url,
 		}
+	},
+	[ImageEditor] : {
+		remoteIcons: config.editor_icons
 	}
 };
 

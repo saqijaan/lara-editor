@@ -8,6 +8,7 @@ return [
         'upload-url' => null,
         'disk' => env('FILESYSTEM_DISK', 'local'),
         'path' => 'editor/media',
-        'filemanager_url' => '/file-manager/'
+        'filemanager_url' => '/file-manager/',
+        'editor_icons' => asset('/vendor/laravel-editor/svg')
     ]
 ];

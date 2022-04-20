@@ -47,6 +47,7 @@ class EditorFactory extends EditorBaseClass
         $editorConfig->assetStoreUrl = $assetRepository->getUploadUrl();
         $editorConfig->filemanagerUrl = $assetRepository->getFileManagerUrl();
         $editorConfig->_token = csrf_token();
+        $editorConfig->editor_icons = config('laraeditor.assets.editor_icons');
         return $editorConfig;
     }
 }
