@@ -189,8 +189,6 @@ export default (editor, options = {}) => {
         path = `${opts.proxy_url}?${opts.proxy_url_input}=${encodeURI(path)}`
       }
 
-      console.log(path)
-
       if (!config.includeUI) config.includeUI = {};
       config.includeUI = {
         theme: {},
