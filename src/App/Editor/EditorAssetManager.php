@@ -14,5 +14,5 @@ class EditorAssetManager
     public int $dropzone = 1;
     public int $openAssetsOnDrop = 0;
     public string $modalTitle = 'Upload Files';
-    public bool $showUrlInput = false;
+    public bool $showUrlInput = true;
 }

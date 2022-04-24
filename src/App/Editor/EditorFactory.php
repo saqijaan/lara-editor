@@ -48,6 +48,8 @@ class EditorFactory extends EditorBaseClass
         $editorConfig->filemanagerUrl = $assetRepository->getFileManagerUrl();
         $editorConfig->_token = csrf_token();
         $editorConfig->editor_icons = config('laraeditor.assets.editor_icons');
+        $editorConfig->media_proxy_url = config('laraeditor.assets.proxy_url') ?? route('laraeditor.asset.proxy_url');
+        $editorConfig->media_proxy_url_input = config('laraeditor.assets.proxy_url_input');
         return $editorConfig;
     }
 }

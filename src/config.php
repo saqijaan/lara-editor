@@ -9,6 +9,8 @@ return [
         'disk' => env('FILESYSTEM_DISK', 'local'),
         'path' => 'editor/media',
         'filemanager_url' => '/file-manager/',
-        'editor_icons' => asset('/vendor/laravel-editor/svg')
+        'editor_icons' => asset('/vendor/laravel-editor/svg'),
+        'proxy_url' => null,
+        'proxy_url_input' => 'file',
     ]
 ];

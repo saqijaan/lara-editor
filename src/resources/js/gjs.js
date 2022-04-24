@@ -31,7 +31,10 @@ config.pluginsOpts = {
 		}
 	},
 	[ImageEditor] : {
-		remoteIcons: config.editor_icons
+		remoteIcons: config.editor_icons,
+		proxy_url : config.media_proxy_url,
+		proxy_url_input : config.media_proxy_url_input,
+		use_proxy : true
 	}
 };
 
