@@ -54,7 +54,7 @@ config.pluginsOpts[grapesjsTuiImageEditor] = {
 }
 
 
-let editor = grapesjs.init(config);
+window.editor = grapesjs.init(config);
 
 let loader = document.getElementById('loader');
 let showLoader = function () {

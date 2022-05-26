@@ -25,5 +25,5 @@ mix.js('src/resources/js/gjs', 'src/public/vendor/laraeditor/editor.js')
 // FOR MAINTAINERS
 // copy asset files from Base's public folder the main app's public folder
 // so that you don't have to publish the assets with artisan to test them
-mix.copyDirectory('src/public', '../../../public')
-mix.copyDirectory('fonts', '../../../public/fonts')
+// mix.copyDirectory('src/public', '../../../public')
+mix.copyDirectory('fonts', 'src/public/fonts')
