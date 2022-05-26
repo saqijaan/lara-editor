@@ -54,7 +54,9 @@ config.pluginsOpts[grapesjsTuiImageEditor] = {
 }
 
 
-window.editor = grapesjs.init(config);
+let editor = grapesjs.init(config);
+
+Object.defineProperty(window,'laralEditor',{value: editor, readonly:true });
 
 let loader = document.getElementById('loader');
 let showLoader = function () {
